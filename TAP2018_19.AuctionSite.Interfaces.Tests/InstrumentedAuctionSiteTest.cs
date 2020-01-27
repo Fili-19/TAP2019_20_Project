@@ -18,5 +18,8 @@ namespace TAP2018_19.AuctionSite.Interfaces.Tests
             kernel.Load(Conﬁguration.ImplementationAssembly);
             AnAuctionSiteFactory = kernel.Get<ISiteFactory>();
         }
+
+        protected ISiteFactory GetSiteFactory() { return AnAuctionSiteFactory; }
+        protected string GetConnectionString() { return Conﬁguration.ConnectionString; }
     }
 }
